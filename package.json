@@ -1,0 +1,21 @@
+{
+    "name": "ap22",
+    "description": "",
+    "version": "0.0.1",
+    "homepage": "",
+    "license": "GPL-3.0",
+    "author": {
+        "name": "Aurélio Santos",
+        "email": "aurhes@gmail.com",
+        "url": ""
+    },
+    "scripts": {
+        "minify": "cat dist/ap22.min.js | wc -c && node minify_ap22.js && cat dist/ap22.min.js | wc -c"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "1.0.1",
+        "grunt-contrib-connect": "1.0.2",
+        "grunt-contrib-watch": "1.0.0"
+    }
+}

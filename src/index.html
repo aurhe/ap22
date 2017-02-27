@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            /*background: #333;*/
+        }
+
+        canvas {
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<canvas id="a"></canvas>
+<script>
+    // shim
+    c = a.getContext('2d');
+    a.width = innerWidth;
+    a.height = innerHeight;
+</script>
+<script src="ap22.js"></script>
+<!-- <script src="../dist/ap22.min.js"></script> -->
+<!--<script src="../dist/ap22.regpack.js"></script>-->
+<script>
+    // https://github.com/mrdoob/stats.js
+    (function () {
+        var script = document.createElement('script');
+        script.onload = function () {
+            var stats = new Stats();
+            document.body.appendChild(stats.dom);
+            requestAnimationFrame(function loop() {
+                stats.update();
+                requestAnimationFrame(loop)
+            });
+        };
+        script.src = 'http://rawgit.com/mrdoob/stats.js/master/build/stats.min.js';
+        document.head.appendChild(script);
+    })()
+</script>
+</body>
+</html>
